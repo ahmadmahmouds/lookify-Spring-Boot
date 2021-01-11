@@ -3,6 +3,7 @@ package com.lookify.demo.models;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -17,16 +18,17 @@ public class Song {
 
 
     @NotNull
-    @Min(5)
+    @Size(min=5,max=255)
     private String title ;
 
 
     @NotNull
-    @Min(5)
+    @Size(min=5,max=255)
     private String artist ;
 
     @NotNull
-    @Size(min = 1, max = 10)
+    @Min(1)
+    @Max(10)
     private Integer rating ;
 
 

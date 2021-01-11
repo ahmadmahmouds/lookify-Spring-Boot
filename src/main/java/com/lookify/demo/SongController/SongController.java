@@ -41,9 +41,8 @@ public class SongController {
 
     @RequestMapping(value = "/dashboard/addSong",method = RequestMethod.POST)
     public  String addNewSong(@Valid @ModelAttribute("song") Song song, BindingResult result){
-        System.out.println("the rating is -->"+song.getRating());
         if (result.hasErrors()){
-            return "songs/new";
+            return "new.jsp";
         }
         else {
             System.out.println("the rating is -->"+song.getRating());

@@ -26,11 +26,11 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${songs}" var="lang">
+    <c:forEach items="${songs}" var="song">
         <tr>
-            <td><a href="languages/${songs.id}"><c:out value="${songs.title}"/></a></td>
-            <td><c:out value="${songs.rating}"/></td>
-            <td><a href="songs/delete/${songs.id}">Edit</a>
+            <td><a href="languages/${song.id}"><c:out value="${song.title}"/></a></td>
+            <td><c:out value="${song.rating}"/></td>
+            <td><a href="songs/delete/${song.id}">Edit</a>
             </td>
         </tr>
     </c:forEach>
